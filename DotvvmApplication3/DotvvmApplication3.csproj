@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <!--ItemGroup>
+    <None Remove="Views\default.dothtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\default.dothtml">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup-->
+
+  <ItemGroup>
+    <PackageReference Include="DotVVM.AspNetCore" Version="4.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Generator\Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Views\*.dothtml" />
+  </ItemGroup>
+
+</Project>
